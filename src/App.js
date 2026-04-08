@@ -24,11 +24,7 @@ function App() {
     <BrowserRouter>
       <div className="font-gilroy font-medium text-gray text-lg leading-[27px]">
         <Routes>
-          <Route
-            path="/"
-            element={<Navigate to={"/react-templates/edumim"} />}
-          />
-          <Route path="/react-templates/edumim" element={<HomeOne />} />
+          <Route path="/" element={<HomeOne />} />
           <Route
             path="/react-templates/edumim/home-two"
             element={<HomeTwo />}
