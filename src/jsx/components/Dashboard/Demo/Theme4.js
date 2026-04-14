@@ -40,6 +40,7 @@ const Theme4 = () => {
 		chnageSidebarColor("color_9");
 		changePrimaryColor("color_9");
 		changeSecondaryColor("color_8");
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	const [dropSelect, setDropSelect] = useState('This Month');
 	return(

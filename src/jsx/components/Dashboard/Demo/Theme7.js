@@ -35,12 +35,13 @@ const Theme7 = () => {
 	} = useContext(ThemeContext);
 	useEffect(() => {
 		changeBackground({ value: "light", label: "Light" });
-	}, []);
-	const [dropSelect, setDropSelect] = useState('This Month');
 		changeNavigationHader("color_12");
 		chnageSidebarColor("color_12");
 		changePrimaryColor("color_12");
 		changeSecondaryColor("color_9");
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+	const [dropSelect, setDropSelect] = useState('This Month');
 	return(
 		<>
 			<div className="row">

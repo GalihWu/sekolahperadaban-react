@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import PerfectScrollbar from "react-perfect-scrollbar";
 import {Accordion} from 'react-bootstrap';
 
@@ -31,7 +30,6 @@ const ChatData = [
 ];
 
 const LiveClass = () =>{
-	const [activeDefault, setActiveDefault] = useState(0);
 	return(
 		<>
 			<div className="row">

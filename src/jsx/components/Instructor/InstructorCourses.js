@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import loadable from "@loadable/component";
 import pMinDelay from "p-min-delay";
 import { Swiper, SwiperSlide } from "swiper/react";

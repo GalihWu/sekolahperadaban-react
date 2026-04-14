@@ -51,7 +51,7 @@ function Login (props) {
 												<div className="text-center my-5">
 													<Link to="/dashboard"><img width="200" src={logofull} alt="" /></Link>
 												</div>
-												<img src={logo} className="education-img"></img>
+												<img src={logo} className="education-img" alt=""></img>
 											</div>	
 										</div>
 										<div className="col-xl-6 col-md-6">

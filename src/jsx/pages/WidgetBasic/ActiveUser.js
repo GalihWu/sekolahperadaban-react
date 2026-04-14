@@ -20,23 +20,22 @@ const data = {
 };
 
 const options = {
-  
-	plugins:{
-		legend: false,
-		tooltips: {
-			enabled: false,
-		},
-		title: {
-			display: false,
-		  },
-	},
- 
+  plugins: {
+    legend: false,
+    tooltips: {
+      enabled: false,
+    },
+    title: {
+      display: false,
+    },
+    streaming: {
+      frameRate: 0,
+    },
+  },
   scales: {
-    y: 
-      {
-        display: false,
-      },
-    
+    y: {
+      display: false,
+    },
     xAxes: [
       {
         display: false,
@@ -52,13 +51,6 @@ const options = {
         },
       },
     ],
-  },
-  
-  plugins: {
-    streaming: {
-      // per-chart option
-      frameRate: 0, // chart is drawn 30 times every second
-    },
   },
 };
 

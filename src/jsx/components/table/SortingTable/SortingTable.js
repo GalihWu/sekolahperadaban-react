@@ -14,12 +14,11 @@ export const SortingTable = () => {
 		useSortBy
 	)
 	
-	const { 
-		getTableProps, 
-		getTableBodyProps, 
+	const {
+		getTableProps,
+		getTableBodyProps,
 		headerGroups,
-		footerGroups,
-		rows, 
+		rows,
 		prepareRow,
 	} = tableInstance
 	

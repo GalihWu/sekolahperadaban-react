@@ -39,6 +39,7 @@ const Theme5 = () => {
 		changeNavigationHader("color_6");
 		changePrimaryColor("color_6");
 		changeSecondaryColor("color_5");
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	const [dropSelect, setDropSelect] = useState('This Month');
 	return(

@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import {Link} from 'react-router-dom';
 import data from "./alertData";
 import PageTitle from "../../layouts/PageTitle";
-import { Row, Card, Col, Alert, Button, Badge, Media } from "react-bootstrap";
+import { Row, Card, Col, Alert, Button, Badge } from "react-bootstrap";
 
 const UiAlert = () => {
   const [socialMedia, setSocialMedia] = useState(

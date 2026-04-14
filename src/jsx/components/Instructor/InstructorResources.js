@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {Accordion} from 'react-bootstrap';
 
@@ -21,7 +21,6 @@ const FaqBlog = [
 ];
 
 const InstructorResources = () =>{
-	const [activeDefault, setActiveDefault] = useState(0);
 	return(
 		<>
 			<div className="row">

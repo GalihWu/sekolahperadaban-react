@@ -10,9 +10,6 @@ import { Link } from "react-router-dom";
 //import avatar from "../../../images/avatar/1.jpg";
 //import { Dropdown } from "react-bootstrap";
 //import LogoutPage from './Logout';
-import RightSideBar from './RightSideBar';
-
-
 import LogoutPage from './Logout';
 
 import United from "../../../images/United.png";

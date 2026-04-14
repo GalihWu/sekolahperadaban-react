@@ -1,26 +1,46 @@
 import React, { createContext, useEffect, useState } from "react";
-import {dezThemeSet} from './ThemeDemo';
+import { dezThemeSet } from "./ThemeDemo";
 
 export const ThemeContext = createContext();
 
 const ThemeContextProvider = (props) => {
-	const [sideBarStyle, setSideBarStyle] = useState({ value: "full", label: "Full",});
-	const [sidebarposition, setSidebarposition] = useState({ value: "fixed",	label: "Fixed",});
-    const [headerposition, setHeaderposition] = useState({ value: "fixed", label: "Fixed", });
-    const [sidebarLayout, setSidebarLayout] = useState({ value: "vertical", label: "Vertical",});
-	const [direction, setDirection] = useState({ value: "ltr", label: "LTR" });
-	const [primaryColor, setPrimaryColor] = useState("color_1");
-	const [secondaryColor, setSecondaryColor] = useState("color_1");
-	const [navigationHader, setNavigationHader] = useState("color_1");
-	const [haderColor, setHaderColor] = useState("color_1");
-	const [sidebarColor, setSidebarColor] = useState("color_1");
-	const [iconHover, setIconHover] = useState(false);
-	const [menuToggle, setMenuToggle] = useState(false);
-	const [background, setBackground] = useState({ value: "light",	label: "Light",});
-	const [containerPosition_, setcontainerPosition_] = useState({value: "wide-boxed", label: "Wide Boxed",});
-    const body = document.querySelector("body");
-    const [windowWidth, setWindowWidth] = useState(0);
-    const [windowHeight, setWindowHeight] = useState(0);
+  const [sideBarStyle, setSideBarStyle] = useState({
+    value: "full",
+    label: "Full",
+  });
+  const [sidebarposition, setSidebarposition] = useState({
+    value: "fixed",
+    label: "Fixed",
+  });
+  const [headerposition, setHeaderposition] = useState({
+    value: "fixed",
+    label: "Fixed",
+  });
+  const [sidebarLayout, setSidebarLayout] = useState({
+    value: "vertical",
+    label: "Vertical",
+  });
+  const [direction, setDirection] = useState({ value: "ltr", label: "LTR" });
+  const [primaryColor, setPrimaryColor] = useState("color_1");
+  const [secondaryColor, setSecondaryColor] = useState("color_1");
+  const [navigationHader, setNavigationHader] = useState("color_1");
+  const [haderColor, setHaderColor] = useState("color_1");
+  const [sidebarColor, setSidebarColor] = useState("color_1");
+  const [iconHover, setIconHover] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
+  const [background, setBackground] = useState({
+    value: "light",
+    label: "Light",
+  });
+  const [containerPosition_, setcontainerPosition_] = useState({
+    value: "wide-boxed",
+    label: "Wide Boxed",
+  });
+  const body = document.querySelector("body");
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  console.log(Boolean(secondaryColor));
 
   // layout
   const layoutOption = [
@@ -81,11 +101,11 @@ const ThemeContextProvider = (props) => {
     { value: "HelveticaNeue", label: "HelveticaNeue" },
   ];
   const changePrimaryColor = (name) => {
-	setPrimaryColor(name);
+    setPrimaryColor(name);
     body.setAttribute("data-primary", name);
   };
   const changeSecondaryColor = (name) => {
-	setSecondaryColor(name);
+    setSecondaryColor(name);
     body.setAttribute("data-secondary", name);
   };
   const changeNavigationHader = (name) => {
@@ -165,55 +185,52 @@ const ThemeContextProvider = (props) => {
     name.value === "boxed" &&
       changeSideBarStyle({ value: "overlay", label: "Overlay" });
   };
-  
-  const setDemoTheme = (theme,direction) => {
 
-	var setAttr = {};	
-	
-	
-	var themeSettings = dezThemeSet[theme];	
-		
-	body.setAttribute("data-typography", themeSettings.typography);
- 
-	setAttr.value = themeSettings.version;
-	changeBackground(setAttr);
-	
-	setAttr.value = themeSettings.layout;
-	changeSideBarLayout(setAttr);
-	
-	//setAttr.value = themeSettings.primary;
-	changePrimaryColor(themeSettings.primary);
-	changeSecondaryColor(themeSettings.secondary);
-	
-//setAttr.value = themeSettings.navheaderBg;
-	changeNavigationHader(themeSettings.navheaderBg);
-	
-//setAttr.value = themeSettings.headerBg;
-	chnageHaderColor(themeSettings.headerBg);
-	
-	setAttr.value = themeSettings.sidebarStyle;
-	changeSideBarStyle(setAttr);
-	
-	//setAttr.value = themeSettings.sidebarBg;
-	chnageSidebarColor(themeSettings.sidebarBg);
-	
-	setAttr.value = themeSettings.sidebarPosition;
-	changeSideBarPostion(setAttr);
-	
-	setAttr.value = themeSettings.headerPosition;
-	changeHeaderPostion(setAttr);
-	
-	setAttr.value = themeSettings.containerLayout;
-	changeContainerPosition(setAttr);
-	
-	//setAttr.value = themeSettings.direction;
-	setAttr.value = direction;
-	changeDirectionLayout(setAttr); 
-	
-	};
+  const setDemoTheme = (theme, direction) => {
+    var setAttr = {};
+
+    var themeSettings = dezThemeSet[theme];
+
+    body.setAttribute("data-typography", themeSettings.typography);
+
+    setAttr.value = themeSettings.version;
+    changeBackground(setAttr);
+
+    setAttr.value = themeSettings.layout;
+    changeSideBarLayout(setAttr);
+
+    //setAttr.value = themeSettings.primary;
+    changePrimaryColor(themeSettings.primary);
+    changeSecondaryColor(themeSettings.secondary);
+
+    //setAttr.value = themeSettings.navheaderBg;
+    changeNavigationHader(themeSettings.navheaderBg);
+
+    //setAttr.value = themeSettings.headerBg;
+    chnageHaderColor(themeSettings.headerBg);
+
+    setAttr.value = themeSettings.sidebarStyle;
+    changeSideBarStyle(setAttr);
+
+    //setAttr.value = themeSettings.sidebarBg;
+    chnageSidebarColor(themeSettings.sidebarBg);
+
+    setAttr.value = themeSettings.sidebarPosition;
+    changeSideBarPostion(setAttr);
+
+    setAttr.value = themeSettings.headerPosition;
+    changeHeaderPostion(setAttr);
+
+    setAttr.value = themeSettings.containerLayout;
+    changeContainerPosition(setAttr);
+
+    //setAttr.value = themeSettings.direction;
+    setAttr.value = direction;
+    changeDirectionLayout(setAttr);
+  };
 
   useEffect(() => {
-	const body = document.querySelector("body");
+    const body = document.querySelector("body");
     body.setAttribute("data-typography", "poppins");
     body.setAttribute("data-theme-version", "light");
     body.setAttribute("data-layout", "vertical");
@@ -222,20 +239,20 @@ const ThemeContextProvider = (props) => {
     body.setAttribute("data-headerbg", "color_1");
     body.setAttribute("data-sidebar-style", "overlay");
     body.setAttribute("data-sibebarbg", "color_1");
-	body.setAttribute("data-secondary", "color_1");
+    body.setAttribute("data-secondary", "color_1");
     body.setAttribute("data-sidebar-position", "fixed");
     body.setAttribute("data-header-position", "fixed");
     body.setAttribute("data-container", "wide");
     body.setAttribute("direction", "ltr");
-		let resizeWindow = () => {
-			setWindowWidth(window.innerWidth);
-			setWindowHeight(window.innerHeight);
-			window.innerWidth >= 768 && window.innerWidth < 1024
-			? body.setAttribute("data-sidebar-style", "mini")
-			: window.innerWidth <= 768
-			? body.setAttribute("data-sidebar-style", "overlay")
-			: body.setAttribute("data-sidebar-style", "full");
-		};
+    let resizeWindow = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+      window.innerWidth >= 768 && window.innerWidth < 1024
+        ? body.setAttribute("data-sidebar-style", "mini")
+        : window.innerWidth <= 768
+          ? body.setAttribute("data-sidebar-style", "overlay")
+          : body.setAttribute("data-sidebar-style", "full");
+    };
     resizeWindow();
     window.addEventListener("resize", resizeWindow);
     return () => window.removeEventListener("resize", resizeWindow);
@@ -253,10 +270,10 @@ const ThemeContextProvider = (props) => {
         containerPosition,
         directionPosition,
         fontFamily,
-		primaryColor,
+        primaryColor,
         navigationHader,
-		windowWidth,
-		windowHeight,
+        windowWidth,
+        windowHeight,
         changePrimaryColor,
         changeSecondaryColor,
         changeNavigationHader,
@@ -282,8 +299,8 @@ const ThemeContextProvider = (props) => {
         changeBackground,
         background,
         containerPosition_,
-		setDemoTheme,
-	}}
+        setDemoTheme,
+      }}
     >
       {props.children}
     </ThemeContext.Provider>
@@ -291,5 +308,3 @@ const ThemeContextProvider = (props) => {
 };
 
 export default ThemeContextProvider;
-
-

@@ -4,32 +4,18 @@ import { Row, Col, Card, Accordion } from "react-bootstrap";
 import PageTitle from "../../layouts/PageTitle";
 
 const UiAccordion = () => {
-  const [activeDefault, setActiveDefault] = useState(0);
-  const [activeBordered, setActiveBordered] = useState(0);
-  const [activeWithoutSpace, setActiveWithoutSpace] = useState(0);
-  const [activeWithoutSpaceBordered, setActiveWithoutSpaceBordered] = useState(
-    0
-  );
-  const [
-    activeIndicatorInLeftPosition,
-    setActiveIndicatorInLeftPosition,
-  ] = useState(0);
-  const [activeAccordionWithIcon, setActiveAccordionWithIcon] = useState(0);
-  const [activeAccordionHeaderBg, setActiveAccordionHeaderBg] = useState(0);
-  const [activeAccordionSolidBg, setActiveAccordionSolidBg] = useState(0);
-  const [
-    activeAccordionActiveHeader,
-    setActiveAccordionActiveHeader,
-  ] = useState(0);
-  const [
-    activeAccordionHeaderShadow,
-    setActiveAccordionHeaderShadow,
-  ] = useState(0);
-  const [
-    activeaccordionRoundedStylish,
-    setActiveaccordionRoundedStylish,
-  ] = useState(0);
-  const [activeAccordionGradient, setActiveAccordionGradient] = useState(0);
+  const [activeDefault] = useState(0);
+  const [activeBordered] = useState(0);
+  const [activeWithoutSpace] = useState(0);
+  const [activeWithoutSpaceBordered] = useState(0);
+  const [activeIndicatorInLeftPosition] = useState(0);
+  const [activeAccordionWithIcon] = useState(0);
+  const [activeAccordionHeaderBg] = useState(0);
+  const [activeAccordionSolidBg] = useState(0);
+  const [activeAccordionActiveHeader] = useState(0);
+  const [activeAccordionHeaderShadow] = useState(0);
+  const [activeaccordionRoundedStylish] = useState(0);
+  const [activeAccordionGradient] = useState(0);
 
   const defaultAccordion = [
     {

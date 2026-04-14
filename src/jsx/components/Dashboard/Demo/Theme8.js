@@ -34,6 +34,7 @@ const Theme8 = () => {
 		changeBackground({ value: "light", label: "Light" });
 		changePrimaryColor("color_10");
 		changeSecondaryColor("color_6");
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	const [dropSelect, setDropSelect] = useState('This Month');
 	return(

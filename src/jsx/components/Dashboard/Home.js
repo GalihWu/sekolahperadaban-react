@@ -30,6 +30,7 @@ const Home = () => {
 	const { changeBackground } = useContext(ThemeContext);
 	useEffect(() => {
 		changeBackground({ value: "light", label: "Light" });
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	const [dropSelect, setDropSelect] = useState('This Month');
 	return(
