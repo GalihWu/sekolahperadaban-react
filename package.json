@@ -2,7 +2,6 @@
   "name": "GetSkills",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://getskills.dexignzone.com/react/demo",
   "dependencies": {
     "@asseinfo/react-kanban": "^2.2.0",
     "@date-io/date-fns": "^2.13.1",
